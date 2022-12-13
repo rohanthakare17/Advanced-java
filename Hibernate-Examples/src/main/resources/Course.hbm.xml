@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "example.entity.Course" table = "Course" lazy="false"><!-- Mapping between class and table-->
+   
+      <!-- Be default, hibernate goes for LAZY loading. In order to disable LAZY loading (Enable EGER loading), 
+      use lazy="false in HBM file -->
+      
+      <id name = "courseId"  column = "course_id" type = "string"/>  <!--id is work as   -->
+         
+      <property name = "name" column = "course_title" type = "string"/>
+      <property name = "duration" column = "course_duration" type = "int"/>
+      <property name = "fees" column = "course_fees" type = "int"/>
+      
+   </class>
+</hibernate-mapping>

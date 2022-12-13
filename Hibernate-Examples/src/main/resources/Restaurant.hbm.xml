@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "example.entity.Restaurant" table = "Restaurant"><!-- Mapping between class and table-->
+      
+      
+      <id name = "restaurantId"  column = "restaurant_Id" type = "int"/>  <!--id is work as   -->
+         
+      <property name = "restaurantName" column = "restaurant_Name" type = "string" length="20"/>
+      <property name = "cuisine" column = "cuisine" type = "string" length="20"/>
+      <property name = "branchCount" column = "branch_Count" type = "int"/>
+      <property name = "establishmentDate" column = "establishment_Date" type = "LocalDate"/>
+     
+   </class>
+</hibernate-mapping>

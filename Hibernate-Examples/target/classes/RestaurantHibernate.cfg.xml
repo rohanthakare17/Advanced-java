@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <!-- Setting the JDBC Connection Properties  -->
+      <property name = "hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+      <property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/rohan</property>
+      
+      <!-- Assume test is the database name & Password-->
+      <property name = "hibernate.connection.username">root</property>
+      <property name = "hibernate.connection.password">rohan1415</property>
+      
+      <!-- Setting the other configuration-->
+      <property name = "hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+      <property name = "hibernate.show_sql">true</property>  <!--Its use to show Query -->
+      <property name = "hibernate.hbm2ddl.auto">update</property> <!-- Or query like " -->
+      <!-- To Create or update table hibernate will be create a table for us-->
+      <!-- It will be create auto with attribute in course -->
+      
+      <!-- List of XML mapping files -->
+      <mapping resource = "Restaurant.hbm.xml"/> <!--we can have multiple mapping file use repate  -->
+      
+   </session-factory>
+</hibernate-configuration>
